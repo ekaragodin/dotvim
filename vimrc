@@ -9,6 +9,8 @@ set encoding=utf-8 nobomb
 set number
 execute pathogen#infect()
 syntax on
+set background=dark
+colorscheme solarized
 set hlsearch
 set ignorecase
 set incsearch
