@@ -7,6 +7,7 @@ set gdefault
 set encoding=utf-8 nobomb
 
 set number
+execute pathogen#infect()
 syntax on
 set cursorline
 set hlsearch
@@ -25,3 +26,4 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoindent
+filetype plugin indent on
