@@ -4,7 +4,6 @@ set wildmenu
 set esckeys
 set ttyfast
 set gdefault
-set encoding=utf-8 nobomb
 
 set number
 execute pathogen#infect()
@@ -41,3 +40,18 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 filetype plugin indent on
+
+if has("gui_running")
+  set linespace=2
+  :set guioptions-=m  "remove menu bar
+  :set guioptions-=T  "remove toolbar
+  :set guioptions-=r  "remove right-hand scroll bar
+
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h14:cDEFAULT
+  endif
+endif
